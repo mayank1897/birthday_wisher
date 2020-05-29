@@ -6,12 +6,13 @@ import smtplib
 def sendemail(to,sub,content):
     new_file=open(r"other\ps.txt")
     server=smtplib.SMTP("smtp.gmail.com",587)
+    #server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.ehlo()
-    server.starttls()
+    server.starttls() # not required at the time ssl connection
     server.login("abc@gmail.com",new_file.read())
     new_file.close()
     server.sendmail("abc@gmail.com",to,f"subject: {sub}\n\n{content}")
-    server.quit()
+    server.quit() #server.close()
 
 if __name__ == "__main__":
     data_frame=pd.read_excel("bday_data.xlsx")
