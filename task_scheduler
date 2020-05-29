@@ -1,0 +1,3 @@
+Schedule a task on windows task scheduler.
+After completing "triggering","actions" steps.....go to the "Settings".
+Select the option "Run task as soon as possible after a scheduled start is missed" in "Settings".....it will automatically run the program even when your system is turned off and restarted on the next day.
