@@ -8,7 +8,7 @@ def sendemail(to,sub,content):
     server=smtplib.SMTP("smtp.gmail.com",587)
     #server=smtplib.SMTP_SSL("smtp.gmail.com",465)
     server.ehlo()
-    server.starttls() # not required at the time ssl connection
+    server.starttls() # not required at the time of ssl connection
     server.login("abc@gmail.com",new_file.read())
     new_file.close()
     server.sendmail("abc@gmail.com",to,f"subject: {sub}\n\n{content}")
